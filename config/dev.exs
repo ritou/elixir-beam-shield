@@ -41,3 +41,11 @@ config :beam_shield, BeamShield.Repo,
   database: "beam_shield_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :authable, Authable.Repo,
+  adapter: Ecto.Adapters.MySQL,
+  username: "root",
+  password: "",
+  database: "beam_shield_authable_dev",
+  hostname: "localhost",
+  pool_size: 10

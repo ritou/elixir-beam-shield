@@ -35,17 +35,17 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :beam_shield, BeamShield.Repo,
-  adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "",
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
   database: "beam_shield_dev",
   hostname: "localhost",
   pool_size: 10
 
 config :authable, Authable.Repo,
-  adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "",
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
   database: "beam_shield_authable_dev",
   hostname: "localhost",
   pool_size: 10

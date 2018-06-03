@@ -11,9 +11,17 @@ config :logger, level: :warn
 
 # Configure your database
 config :beam_shield, BeamShield.Repo,
-  adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "",
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
   database: "beam_shield_test",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox
+
+config :authable, Authable.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "beam_shield_authable_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

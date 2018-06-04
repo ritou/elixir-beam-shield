@@ -71,6 +71,9 @@ config :shield_notifier,
     }
   }
 
+config :shield_notifier, Shield.Notifier.Mailer,
+  adapter: Bamboo.TestAdapter
+
 config :shield,
   confirmable: true,
   otp_check: false,
